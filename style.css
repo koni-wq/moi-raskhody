@@ -1,0 +1,166 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f5f9;
+  color: #293449;
+}
+
+.container {
+  max-width: 850px;
+  margin: 35px auto;
+  padding: 20px;
+}
+
+header {
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #7b8495;
+}
+
+section {
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 18px #26334d0d;
+}
+
+.summary {
+  background: #e7eefb;
+}
+
+.summary p {
+  font-size: 32px;
+  font-weight: bold;
+  color: #416bb3;
+  margin: 10px 0 0;
+}
+
+h2 {
+  font-size: 19px;
+}
+
+#tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+button {
+  border: none;
+  border-radius: 9px;
+  padding: 11px 15px;
+  background: #5279bb;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.tab {
+  background: #e8edf5;
+  color: #293449;
+}
+
+.tab.active {
+  background: #5279bb;
+  color: white;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dce1e9;
+  border-radius: 9px;
+  font-size: 15px;
+  background: white;
+}
+
+input[type="color"] {
+  height: 45px;
+}
+
+.expense {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 13px;
+  border-left: 5px solid;
+  background: #f8f9fc;
+  border-radius: 9px;
+  margin: 10px 0;
+}
+
+.expense small {
+  display: block;
+  color: #7b8495;
+  margin-top: 5px;
+}
+
+.delete {
+  background: #e9a1a1;
+  flex-shrink: 0;
+}
+
+.chart {
+  width: 220px;
+  height: 220px;
+  margin: 20px auto;
+  border-radius: 50%;
+  background: conic-gradient(#e8edf5 0% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.chart::before {
+  content: "";
+  position: absolute;
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  background: white;
+}
+
+#chartTotal {
+  z-index: 1;
+  font-weight: bold;
+}
+
+#legend div {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 10px auto;
+    padding: 12px;
+  }
+
+  header h1 {
+    font-size: 26px;
+  }
+}

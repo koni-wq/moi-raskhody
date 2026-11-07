@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#5279bb">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мои расходы</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Мои расходы</h1>
+      <p>Контролируй свои расходы каждый день</p>
+    </header>
+
+    <section class="summary">
+      <h2>Общая сумма расходов</h2>
+      <p id="total">0 ₸</p>
+    </section>
+
+    <section class="tabs">
+      <div id="tabs"></div>
+      <button id="addTab">+ Новая вкладка</button>
+    </section>
+
+    <section class="form-card">
+      <h2>Добавить расход</h2>
+      <form id="expenseForm">
+        <input id="description" placeholder="Название расхода" required>
+        <input id="amount" type="number" min="1" placeholder="Сумма в ₸" required>
+
+        <select id="category">
+          <option>Магазин</option>
+          <option>Кафе</option>
+          <option>Транспорт</option>
+          <option>Учёба</option>
+          <option>Телефон</option>
+          <option>Другое</option>
+        </select>
+
+        <input id="date" type="date" required>
+        <input id="color" type="color" value="#638dca">
+
+        <button type="submit">Сохранить расход</button>
+      </form>
+    </section>
+
+    <section class="expenses-card">
+      <h2>Список расходов</h2>
+      <div id="expenses"></div>
+    </section>
+
+    <section class="chart-card">
+      <h2>Распределение расходов</h2>
+      <div id="chart" class="chart">
+        <span id="chartTotal">0 ₸</span>
+      </div>
+      <div id="legend"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
